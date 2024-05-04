@@ -1,0 +1,81 @@
+.dnd-logo {
+    width: 500px; /* Example: setting the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Example: make the corners rounded */
+    margin: 5px 0; /* Example: add some margin around the image */
+}
+
+/* Styles for the custom button */
+.custom-button {
+    background-color: #ff0000b9; /* Set the background color */
+    color: white; /* Set the text color */
+    padding: 10px 20px; /* Add padding to the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    margin: 10px; /* Add margin around the button */
+    /* Add any additional styles as needed */
+}
+
+.custom-button:hover {
+    background-color: #480707f5; /* Change background color on hover */
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #282c34;
+    padding: 10px;
+}
+
+.navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar-item {
+    margin-right: 20px;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+    color: #ff0000b9;
+}
+
+/* Image styles */
+.dnd-logo {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* Button styles */
+.custom-button {
+    background-color: #ff0000b9;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+    background-color: #480707f5;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 20px 0;
+    font-family: 'Mrs Eaves Small Caps', sans-serif;
+}
