@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Dieroller.css';
 
 //d4 Image imports
 import D401 from '../../assets/D4/D4-1.png';
@@ -78,76 +79,76 @@ import D2020 from '../../assets/D20/D20-20.png';
 
 const diceImages = {
     d4: {
-    1: D401,
-    2: D402,
-    3: D403,
-    4: D404
+        1: D401,
+        2: D402,
+        3: D403,
+        4: D404
     },
     d6: {
-    1: D601,
-    2: D602,
-    3: D603,
-    4: D604,
-    5: D605,
-    6: D606
+        1: D601,
+        2: D602,
+        3: D603,
+        4: D604,
+        5: D605,
+        6: D606
     },
     d8: {
-    1: D801,
-    2: D802,
-    3: D803,
-    4: D804,
-    5: D805,
-    6: D806,
-    7: D807,
-    8: D808
+        1: D801,
+        2: D802,
+        3: D803,
+        4: D804,
+        5: D805,
+        6: D806,
+        7: D807,
+        8: D808
     },
     d10: {
-    1: D1001,
-    2: D1002,
-    3: D1003,
-    4: D1004,
-    5: D1005,
-    6: D1006,
-    7: D1007,
-    8: D1008,
-    9: D1009,
-    10: D1010
+        1: D1001,
+        2: D1002,
+        3: D1003,
+        4: D1004,
+        5: D1005,
+        6: D1006,
+        7: D1007,
+        8: D1008,
+        9: D1009,
+        10: D1010
     },
     d12: {
-    1: D1201,
-    2: D1202,
-    3: D1203,
-    4: D1204,
-    5: D1205,
-    6: D1206,
-    7: D1207,
-    8: D1208,
-    9: D1209,
-    10: D1210,
-    11: D1211,
-    12: D1212
+        1: D1201,
+        2: D1202,
+        3: D1203,
+        4: D1204,
+        5: D1205,
+        6: D1206,
+        7: D1207,
+        8: D1208,
+        9: D1209,
+        10: D1210,
+        11: D1211,
+        12: D1212
     },
     d20: {
-    1: D201,
-    2: D202,
-    3: D203,
-    4: D204,
-    5: D205,
-    6: D206,
-    7: D207,
-    8: D208,
-    9: D209,
-    10: D2010,
-    11: D2011,
-    12: D2012,
-    13: D2013,
-    14: D2014,
-    15: D2015,
-    16: D2016,
-    17: D2017,
-    18: D2018,
-    19: D2019,
-    20: D2020  
+        1: D201,
+        2: D202,
+        3: D203,
+        4: D204,
+        5: D205,
+        6: D206,
+        7: D207,
+        8: D208,
+        9: D209,
+        10: D2010,
+        11: D2011,
+        12: D2012,
+        13: D2013,
+        14: D2014,
+        15: D2015,
+        16: D2016,
+        17: D2017,
+        18: D2018,
+        19: D2019,
+        20: D2020
     }
 };
 
@@ -166,6 +167,7 @@ const Dieroller = () => {
     const [selectedDice, setSelectedDice] = useState('d6');
     const [numberOfDice, setNumberOfDice] = useState(1);
     const [rolls, setRolls] = useState([]);
+    const [modiferNumber, setModifierNumber] = useState(0);
 
     const rollDice = () => {
         const diceMax = diceTypes[selectedDice];
@@ -174,11 +176,11 @@ const Dieroller = () => {
     };
 
     const diceSumTotal = () => {
-        return rolls.reduce((acc, curr) => acc + curr, 0); // Use reduce for a more concise and functional approach
+        return rolls.reduce((acc, curr) => acc + curr, 0) + modiferNumber; // Use reduce for a more concise and functional approach
     };
 
     return (
-        <div>
+        <>
             <header className="header">
                 <nav className="navbar">
                     <ul className="navbar-list">
@@ -189,35 +191,39 @@ const Dieroller = () => {
                     </ul>
                 </nav>
             </header>
-            <h1>Dice Roller</h1>
-            <div>
-                <label htmlFor="diceType">Choose a dice type:</label>
-                <select id="diceType" value={selectedDice} onChange={(e) => setSelectedDice(e.target.value)}>
-                    {Object.keys(diceTypes).map((type) => (
-                        <option key={type} value={type}>{type.toUpperCase()}</option>
-                    ))}
-                </select>
-                <label htmlFor="numDice">Number of Dice:</label>
-                <input type="number" id="numDice" value={numberOfDice} min="1" onChange={(e) => setNumberOfDice(parseInt(e.target.value, 10))} />
-                <button onClick={rollDice}>Roll Dice</button>
-                </div>
-            {rolls.length > 0 && (
-                <div>
-                    <p>You rolled: {rolls.join(', ')}</p>
-                    <p>Total: {diceSumTotal()}</p>
-                    <div>
-                        {rolls.map((roll, index) => {
-                            const imageSrc = diceImages[selectedDice] && diceImages[selectedDice][roll];
-                            return (
-                                imageSrc ? <img key={index} src={imageSrc} alt={`Dice roll: ${roll}`} style={{ width: '100px', height: '100px' }} /> : <p key={index}>Image not found</p>
-                            );
-                        })}
+            <div className="dieroller-container">
+                <div className="card">
+                    <div className="controls">
+                        <label htmlFor="diceType">Choose a dice type:</label>
+                        <select id="diceType" value={selectedDice} onChange={(e) => setSelectedDice(e.target.value)}>
+                            {Object.keys(diceTypes).map((type) => (
+                                <option key={type} value={type}>{type.toUpperCase()}</option>
+                            ))}
+                        </select>
+                        <label htmlFor="numDice">Number of Dice:</label>
+                        <input type="number" id="numDice" value={numberOfDice} min="1" onChange={(e) => setNumberOfDice(parseInt(e.target.value, 10))} />
+                        <label htmlFor='Modifier'>Modifier:</label>
+                        <input type="number" id="modiferNumber" value={modiferNumber} onChange={(e) => setModifierNumber(parseInt(e.target.value, 10))} /> {/* Modifier input field */}
+                        <button onClick={rollDice}>Roll Dice</button>
                     </div>
                 </div>
-            )}
-        </div>
+                {rolls.length > 0 && (
+                    <div className="card results-card">
+                        <p>Total: {diceSumTotal()}</p>
+                        <div className="dice-images">
+                            {rolls.map((roll, index) => {
+                                const imageSrc = diceImages[selectedDice] && diceImages[selectedDice][roll];
+                                return (
+                                    imageSrc ? <img key={index} src={imageSrc} alt={`Dice roll: ${roll}`} style={{ width: '100px', height: '100px' }} /> : <p key={index}>Image not found</p>
+                                );
+                            })}
+                        </div>
+                    </div>
+                )}
+            </div>
+        </>
     );
 };
 
-
 export default Dieroller;
+

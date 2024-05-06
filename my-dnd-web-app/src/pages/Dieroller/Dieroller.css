@@ -1,0 +1,49 @@
+.dieroller-container {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f4f4f4e6;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    color: red;
+    text-shadow: 1px 1px 1px black;
+}
+
+.results-card {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    color: red;
+    text-shadow: 1px 1px 1px black;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    gap: 20px; /* Increased gap for better visual separation */
+}
+
+.dice-images img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+select, input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 25%; /* Adjust the width as needed */
+    max-width: 300px; /* Limit the maximum width to prevent stretching */
+}
