@@ -1,0 +1,265 @@
+{
+    "Bard": {
+      "name": "Bard",
+      "description": "Bards are masters of song, speech, and the magic they contain.",
+      "hitDice": "1d8",
+      "baseHitPoints": 8,
+      "hitPointAddPerLevel": 5,
+      "proficiencies": {
+        "armor": ["Light armor"],
+        "weapons": ["Simple weapons", "Hand crossbows", "Longswords", "Rapiers", "Shortswords"],
+        "tools": ["Three musical instruments of your choice"],
+        "savingThrows": ["Dexterity", "Charisma"],
+        "skills": ["Choose any three from Acrobatics, Animal Handling, Arcana, Athletics, Deception, History, Insight, Intimidation, Investigation, Medicine, Nature, Perception, Performance, Persuasion, Religion, Sleight of Hand, Stealth, Survival"]
+      },
+      "startingEquipment": [
+        ["a rapier", "a longsword", "any simple weapon"],
+        ["a diplomat’s pack", "an entertainer’s pack"],
+        ["a lute", "any other musical instrument"],
+        "Leather armor and a dagger"
+      ],
+      "levels": {
+        "1": {
+          "features": ["Spellcasting", "Bardic Inspiration (d6)"],
+          "spellsKnown": 4,
+          "cantripsKnown": 2,
+          "spellSlots": {"1st": 2}
+        },
+        "2": {
+          "features": ["Jack of All Trades", "Song of Rest (d6)"],
+          "spellsKnown": 5,
+          "cantripsKnown": 2,
+          "spellSlots": {"1st": 3}
+        },
+        "3": {
+          "features": ["Bard College", "Expertise"],
+          "spellsKnown": 6,
+          "cantripsKnown": 2,
+          "spellSlots": {"1st": 4, "2nd": 2}
+        },
+        "4": {
+          "features": ["Ability Score Improvement"],
+          "spellsKnown": 7,
+          "cantripsKnown": 3,
+          "spellSlots": {"1st": 4, "2nd": 3}
+        },
+        "5": {
+          "features": ["Bardic Inspiration (d8)", "Font of Inspiration"],
+          "spellsKnown": 8,
+          "cantripsKnown": 3,
+          "spellSlots": {"1st": 4, "2nd": 3, "3rd": 2}
+        },
+        "6": {
+          "features": ["Countercharm", "Bard College Feature"],
+          "spellsKnown": 9,
+          "cantripsKnown": 3,
+          "spellSlots": {"1st": 4, "2nd": 3, "3rd": 3}
+        },
+        "7": {
+          "features": [],
+          "spellsKnown": 10,
+          "cantripsKnown": 3,
+          "spellSlots": {"1st": 4, "2nd": 3, "3rd": 3, "4th": 1}
+        },
+        "8": {
+          "features": ["Ability Score Improvement"],
+          "spellsKnown": 11,
+          "cantripsKnown": 3,
+          "spellSlots": {"1st": 4, "2nd": 3, "3rd": 3, "4th": 2}
+        },
+        "9": {
+          "features": ["Song of Rest (d8)"],
+          "spellsKnown": 12,
+          "cantripsKnown": 3,
+          "spellSlots": {"1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 1}
+        },
+        "10": {
+          "features": ["Bardic Inspiration (d10)", "Expertise", "Magical Secrets"],
+          "spellsKnown": 14,
+          "cantripsKnown": 4,
+          "spellSlots": {"1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 2}
+        },
+        "11": {
+          "features": [],
+          "spellsKnown": 15,
+          "cantripsKnown": 4,
+          "spellSlots": {"1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 2}
+        },
+        "12": {
+          "features": ["Ability Score Improvement"],
+          "spellsKnown": 15,
+          "cantripsKnown": 4,
+          "spellSlots": {"1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 2}
+        },
+        "13": {
+          "features": ["Song of Rest (d10)"],
+          "spellsKnown": 16,
+          "cantripsKnown": 4,
+          "spellSlots": {"1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 2, "6th": 1}
+        },
+        "14": {
+          "features": ["Magical Secrets", "Bard College Feature"],
+          "spellsKnown": 18,
+          "cantripsKnown": 4,
+          "spellSlots": {"1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 2, "6th": 1}
+        },
+        "15": {
+          "features": ["Bardic Inspiration (d12)"],
+          "spellsKnown": 19,
+          "cantripsKnown": 4,
+          "spellSlots": {"1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 2, "6th": 1}
+        },
+        "16": {
+          "features": ["Ability Score Improvement"],
+          "spellsKnown": 19,
+          "cantripsKnown": 4,
+          "spellSlots": {"1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 2, "6th": 1}
+        },
+        "17": {
+          "features": ["Song of Rest (d12)"],
+          "spellsKnown": 20,
+          "cantripsKnown": 4,
+          "spellSlots": {"1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 2, "6th": 1, "7th": 1}
+        },
+        "18": {
+          "features": ["Magical Secrets"],
+          "spellsKnown": 22,
+          "cantripsKnown": 4,
+          "spellSlots": {"1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 2, "6th": 1, "7th": 1}
+        },
+        "19": {
+          "features": ["Ability Score Improvement"],
+          "spellsKnown": 22,
+          "cantripsKnown": 4,
+          "spellSlots": {"1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 2, "6th": 1, "7th": 1}
+        },
+        "20": {
+          "features": ["Superior Inspiration"],
+          "spellsKnown": 22,
+          "cantripsKnown": 4,
+          "spellSlots": {"1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 2, "6th": 1, "7th": 1, "8th": 1}
+        },
+        "subclasses": {
+          "College of Lore": {
+            "description": "The College of Lore is focused on the magic of the written word, generally favoring the arcane and the knowledgeable.",
+            "features": {
+              "3": ["Bonus Proficiencies", "Cutting Words"],
+              "6": ["Additional Magical Secrets"],
+              "14": ["Peerless Skill"]
+            }
+          },
+          "College of Valor": {
+            "description": "The College of Valor is for bards who seek adventure and face danger with a brave heart.",
+            "features": {
+              "3": ["Bonus Proficiencies", "Combat Inspiration"],
+              "6": ["Extra Attack"],
+              "14": ["Battle Magic"]
+            }
+          }
+        }
+      }
+    },
+    "Fighter": {
+        "name": "Fighter",
+        "description": "Fighters are combat masters with unparalleled fighting skills.",
+        "hitDice": "1d10",
+        "baseHitPoints": 10,
+        "hitPointAddPerLevel": 6,
+        "proficiencies": {
+            "armor": ["All armor", "Shields"],
+            "weapons": ["Simple weapons", "Martial weapons"],
+            "tools": [],
+            "savingThrows": ["Strength", "Constitution"],
+            "skills": ["Choose any two from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, and Survival"]
+        },
+        "startingEquipment": [
+            ["Chain mail", "Leather armor and longbow with 20 arrows"],
+            ["Shield", "Any martial weapon and a martial weapon of your choice"],
+            ["A light crossbow and 20 bolts", "Two handaxes"]
+        ],
+        "levels": {
+            "1": {
+                "features": ["Fighting Style", "Second Wind"],
+                "hitPoints": 10,
+                "armorProficiencies": ["All armor", "Shields"],
+                "weaponProficiencies": ["Simple weapons", "Martial weapons"]
+            },
+            "2": {
+                "features": ["Action Surge (One Use)"],
+                "hitPoints": 16
+            },
+            "3": {
+                "features": ["Martial Archetype", "Martial Archetype Feature"],
+                "hitPoints": 22
+            },
+            "4": {
+                "features": ["Ability Score Improvement"],
+                "hitPoints": 28
+            },
+            "5": {
+                "features": ["Extra Attack"],
+                "hitPoints": 34
+            },
+            "6": {
+                "features": ["Ability Score Improvement"],
+                "hitPoints": 40
+            },
+            "7": {
+                "features": ["Martial Archetype Feature"],
+                "hitPoints": 46
+            },
+            "8": {
+                "features": ["Ability Score Improvement"],
+                "hitPoints": 52
+            },
+            "9": {
+                "features": [],
+                "hitPoints": 58
+            },
+            "10": {
+                "features": ["Martial Archetype Feature"],
+                "hitPoints": 64
+            },
+            "11": {
+                "features": ["Extra Attack (2)"],
+                "hitPoints": 70
+            },
+            "12": {
+                "features": ["Ability Score Improvement"],
+                "hitPoints": 76
+            },
+            "13": {
+                "features": [],
+                "hitPoints": 82
+            },
+            "14": {
+                "features": ["Martial Archetype Feature"],
+                "hitPoints": 88
+            },
+            "15": {
+                "features": [],
+                "hitPoints": 94
+            },
+            "16": {
+                "features": ["Ability Score Improvement"],
+                "hitPoints": 100
+            },
+            "17": {
+                "features": [],
+                "hitPoints": 106
+            },
+            "18": {
+                "features": ["Martial Archetype Feature"],
+                "hitPoints": 112
+            },
+            "19": {
+                "features": ["Ability Score Improvement"],
+                "hitPoints": 118
+            },
+            "20": {
+                "features": ["Extra Attack (3)"],
+                "hitPoints": 124
+            }
+        }
+    }
+}

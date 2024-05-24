@@ -204,7 +204,7 @@ const Dieroller = () => {
                         <input type="number" id="numDice" value={numberOfDice} min="1" onChange={(e) => setNumberOfDice(parseInt(e.target.value, 10))} />
                         <label htmlFor='Modifier'>Modifier:</label>
                         <input type="number" id="modiferNumber" value={modiferNumber} onChange={(e) => setModifierNumber(parseInt(e.target.value, 10))} /> {/* Modifier input field */}
-                        <button onClick={rollDice}>Roll Dice</button>
+                        <button className="custom-button" onClick={rollDice}>Roll Dice</button>
                     </div>
                 </div>
                 {rolls.length > 0 && (
